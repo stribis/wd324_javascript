@@ -72,7 +72,7 @@ let myOtherSymbol = Symbol('mySymbol');
 let isSymbolUnique = mySymbol === myOtherSymbol
 console.log("is the symbol unique? " + isSymbolUnique);
 
-// undefined - the variable is unassigned, usually done by the compiler and you should try to avoid doing it on your own. Very error prone
+// undefined - the variable is unassigned, usually done by the compiler and you should try to avoid doing it on your own. Very error-prone
 let undefinedVar;
 undefinedVar = undefined;
 
@@ -80,9 +80,9 @@ undefinedVar = undefined;
 let nullVar = null;
 
 // fun-fact:
-// undefined and null both are an special kind objects and thus confusingly "primitive" types. In none of the cases they will ever be the same!
-console.log("typeof(undefined): " + typeof(undefined));
-console.log("typeof(null): " + typeof(null));
+// undefined and null both are a special kind objects and thus confusingly "primitive" types. In none of the cases they will ever be the same!
+console.log("typeof(undefined): " + typeofundefined);
+console.log("typeof(null): " + typeofnull);
 console.log("undefined == null: "+ undefined == null);
 console.log("undefined == null: " + undefined === null);
 
@@ -90,7 +90,7 @@ console.log("undefined == null: " + undefined === null);
 Stored on the Memory Heap
 A non-primitive data type is assigned an address as a value, which then creates a pointer to that address location in the memory heap.
 Mutable: Non-primitive data types are mutable, which means when they are modified, the original copy is modified. 
-Modifying these will not create a copy at a different address. Any direct modifications will effect the same address in the heap.*/
+Modifying these will not create a copy at a different address. Any direct modifications will affect the same address in the heap.*/
 
 // object
 let person = {
@@ -125,14 +125,14 @@ console.log("modulo value: " + moduloValue);
 let incrementMe = 1;
 incrementMe = incrementMe + 1
 // or
-incrementMe += 1; // or 2, 3, etc..
+incrementMe += 1; // or 2, 3, etc.
 // or
 incrementMe++; // always +1
 
 let decrementMe = 10;
 incrementMe = decrementMe - 1
 // or
-decrementMe -= 1; // or 2, 3, etc..
+decrementMe -= 1; // or 2, 3, etc.
 // or
 decrementMe--; // always -1
 
@@ -146,7 +146,7 @@ let aFalse = false;
 
 if (aTrue && aFalse) {
     // do something
-};
+}
 
 if (aTrue || aFalse) {
     // do something

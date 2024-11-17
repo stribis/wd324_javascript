@@ -8,10 +8,10 @@
   
  Naming:
     You can give any name to a variable. Good practise: the variable must explain what it is holding. Make it logical an easy to maintain
-    There are so called "reserved keywords" which are "names" that are used by the language per se and are not available to be used for variable names, e.g. let, var, const, for, while, break, case, etc..
+    There are so-called "reserved keywords" which are "names" that are used by the language per se and are not available to be used for variable names, e.g. let, var, const, for, while, break, case, etc.
  Declaration:
-    It means you introduce a variable to the script and thus to the compiler. The variable will get its existance
-    A declared variable without value assignment / initialization is per default "undefined" and has no value. It is pretty much useless and waste of ressources */
+    It means you introduce a variable to the script and thus to the compiler. The variable will get its existence
+    A declared variable without value assignment / initialization is per default "undefined" and has no value. It is pretty much useless and waste of resources */
     var myVariable;
 
 /* declaration keywords: var, let, const 
@@ -41,6 +41,6 @@ myExample = {fruit: "banana", country: "belgium", river: "bog river"};
 console.log("5 reassignment: "+ myExample);
 console.log("It is been the same variable at all times but we had different datatypes assigned to it :o!");
 
-// console.log => a object method that will print (log / log an entry) anything provided as arguments to the browser console.
+// console.log => an object method that will print (log / log an entry) anything provided as arguments to the browser console.
 console.log(typeof(console));
 console.log("Hello World!");

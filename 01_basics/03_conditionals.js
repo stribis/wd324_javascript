@@ -32,7 +32,7 @@ else
 {
     // but what if I am looking for purple ???
     console.log("color is not available");
-};
+}
 
 // Switch: (syntactic sugar // syntax sugar) -- it is the same as the if-else condition under the hood, just "nicely" written
 switch(color) 
