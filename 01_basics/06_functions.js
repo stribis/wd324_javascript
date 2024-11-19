@@ -38,7 +38,9 @@ greet("Alice");  // Outputs: Hello, Alice!
 
 /* Parameter: The variable inside the parentheses (name).
    Argument: The value passed to the function when calling it ("Alice").
-   Default Parameters: Explain how parameters can have default values.*/
+   Default Parameters: Parameters can have default values. If nothing is passed 
+   when the function is called by the caller, the default param value is used
+*/
 
 function greetWithDefaultArgument(name = "Guest") {
     console.log("Hello, " + name + "!");
@@ -86,7 +88,8 @@ console.log(add(3, 5));  // Outputs: 8
 /* Why use arrow functions?
     Shorter syntax, especially for one-liners.
     Lexical this binding: Arrow functions don't bind their own this, making them more predictable in certain contexts
-    (explained later).*/
+    (explained later in the course) 
+*/
 
 
 /* 7. Scope and Closures
@@ -112,7 +115,7 @@ function testVar() {
     if (true) {
         var x = 10; // Scoped to the function, not the block
     }
-    console.log(x); // Works! Output: 10
+    console.log(x); // Works! Output: 10. But it better shouldnt, as we are in a different block!
 }
 
 testVar();
@@ -137,26 +140,27 @@ function testVarWithGlobal() {
     if (true) {
         var xVar = 10; // Scoped to the block
     }
-    console.log(xVar); // Output: xVar = 10 inside the functions block scope
+    console.log(xVar); // Output: xVar = 10 inside the functions block scope, but it should be 0 from the global scope or not known at all when not existing in the global scope!
 }
 
 testVarWithGlobal();
 console.log(xVar); /* Output: xVar = 10 you managed to overwrite the global scoped variable because it was declared as var,
                    which is not good and a huge side effect */
+/* a variable declared with bar is the same variable is known (shared) throughout the entire scope
 
-// vs
+vs */
 let xLet = 0;
 function testLetWithGlobal() {
     if (true) {
         let xLet = 10; // Scoped to the block
-        console.log(xLet); // Output: x = 10 inside the functions block scope
+        console.log(xLet); // Output: x = 10 inside the functions block scope takes the value from the variable declared in the block.
     }
-    console.log(xLet); /* Output: x = 0 is again taking the value from global scope which remains unchanged
+    console.log(xLet); /* Output: x = 0, on the other hand, here the value from the global scope is taken, since only that is available here. It dosnt know the other block. Good!
     as the variable was block scoped with let */
 }
 
 testLetWithGlobal();
-console.log(xLet); /* Output: x = 0 the xLet inside the function is not the same as the xLet in the global
+console.log(xLet); /* Output: x = 0 the xLet inside the function -> if block is not the same as the xLet in the global
  scope because of let, which is good as yo will probably use this variable of the global scope for different things too! */
 
 
