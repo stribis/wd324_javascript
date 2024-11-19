@@ -8,20 +8,37 @@
 <body>
   <h1>DOM Time</h1>
   <div class="container"> Container 1
-    <div class="class1">Element 1</div>
-    <p id="id1">Element 2</p>
-    <span id="id2">Element 3</span>
+    <div class="class1">div element</div>
+    <p id="id1">p element</p>
+    <span id="id2">span element</span>
   </div>
-  <button id="button1">Click Me</button>
   <ul class="ul1">
-    <li id="li1">Element 1</li>
-    <li id="li2">Element 2</li>
-    <li id="li3">Element 3</li>
+    <li id="li1">li item 1</li>
+    <li id="li2">li item 2</li>
+    <li id="li3">li item 3</li>
   </ul>
-  <div class="original">Original</div>
+  <div class="original">Original
+    <div>deep 1</div>
+    <div>deep 2</div>
+    <div>deep 3</div>
+  </div>
+  <div class="clone-container">Clones</div>
   <div class="container2">Container 2</div>
   <div class="parent">
     <div class="elementToRemove">Element Disposive</div>
+  </div>
+  <div class="eventListenersContainer">
+    <button class="buttonX">Anonymous Function</button>
+    <button class="buttonY">Function Expression</button>
+    <button class="buttonZ">Arrow Function</button>
+  </div>
+  <div class="to-do__container">
+    <h3>To Do List</h3>
+    <label for="name">To do:</label>
+    <input type="text" id="name"/>
+    <button class="addBtn">Add</button>
+    <button class="removeBtn">Remove</button>
+    <ul class="to-do-list"></ul>
   </div>
   <script src="01_intro.js"></script>
   <script src="02_manipulation.js"></script>
