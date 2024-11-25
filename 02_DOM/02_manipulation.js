@@ -3,7 +3,7 @@
 /* getElementsByClassName()
      Returns a live HTMLCollection of elements matching a class name.
      If you need a specific one you have to select the correct index of the item
-     e.g. document.getElementsByClassName("classX")[0] -> first element found in the DOM
+     e.g. document.getElementsByClassName("classX")[0] -> first element found in the DOM with a className "classX"
 */
 
  const divElements = document.getElementsByClassName("class1");
@@ -254,10 +254,35 @@ clones.appendChild(deepClone);
 */
 
 
-//  Event Listener:
+/* Event Listener:
+   What is an event listener?
 
-/* Adding an event listener to the DOM:
-   To add an event listener to an element, you use the addEventListener method.
+   Imagine a Doorbell and a Listener:
+   A button on a webpage is like a doorbell.
+   An event is like someone pressing the doorbell (the action).
+   An event listener is like you standing by the door and listening for the doorbell to ring.
+   When the doorbell rings (the event happens), you react by opening the door (a specific function runs).
+
+   What is an Event?
+   An event is something that happens on a webpage.
+    - A button is clicked.
+    - The mouse is moved.
+    - A key is pressed.
+    - The page is scrolled.
+    - ... (like almost every interaction ;))
+
+   What is an Event Listener?
+   An event listener is like a watcher and as the name already implies: "something that is listening ...".
+   It waits for a specific event to happen and then, when it happened, runs some code (a callback function) in response.
+
+   What is addEventListener?
+   The addEventListener method is how we tell the webpage to listen for a specific event on an element
+   (like a button, input box, or the whole page). Technically we are "attaching" / "putting" the listener-thingy
+   (mentioned above) to a specific element so that it becomes able to do the "listening" and returning the callback
+   function.
+
+   Adding an event listener to the DOM:
+   To add an event listener to an element, you use the 'addEventListener()' method.
    This method allows you to define a specific function that will execute
    when the specified event occurs on the target element.
 
@@ -271,6 +296,7 @@ clones.appendChild(deepClone);
         once: If true, the listener is executed only once and then removed.
         passive: If true, indicates that the listener will not call preventDefault()
 */
+
 const buttonX = document.querySelector(".buttonX");
 const buttonY = document.querySelector(".buttonY");
 const buttonZ = document.querySelector(".buttonZ");
@@ -308,24 +334,24 @@ const toDoList = document.querySelector(".to-do-list")
 
 // add the item logic
 const addItem = function addItem() {
-      const value = input.value; // we get the value that is inside the input element, basically what the user typed in
+    const value = input.value; // we get the value that is inside the input element, basically what the user typed in
 
-      // we don't want the user to be able to enter an empty to-do! What would it be good for?
-      if (value === "") { // if the value in the input box is empty, we just inform the user and leave the function
-          alert("You must give the todo a name!")
-          return;
-      }
+    // we don't want the user to be able to enter an empty to-do! What would it be good for?
+    if (value === "") { // if the value in the input box is empty, we just inform the user and leave the function
+      alert("You must give the todo a name!")
+      return;
+    }
 
-      // if the input has a value, we can create a new li and append it to the DOM:
-      const newItem = document.createElement("li"); // we create a new li element
-      newItem.classList.add("to-do-item"); // we add a class 'to-do-item' to the new li element, so we can better select it later
-      newItem.textContent = value; // we assign the value retrieved from the input-box to the textContent of the new li element
-      toDoList.appendChild(newItem); // we append the li element to the toDoList which is an ul element in the DOM
+    // if the input has a value, we can create a new li and append it to the DOM:
+    const newItem = document.createElement("li"); // we create a new li element
+    newItem.classList.add("to-do-item"); // we add a class 'to-do-item' to the new li element, so we can better select it later
+    newItem.textContent = value; // we assign the value retrieved from the input-box to the textContent of the new li element
+    toDoList.appendChild(newItem); // we append the li element to the toDoList which is an ul element in the DOM
 };
 
 /* remove the item logc
    Pre-Warning: this function is a bit more complex ;) */
-const removeItem = function removeItem() {
+    const removeItem = function removeItem() {
     const value = input.value; // we get the name of the item from the input box (the one the user wants to remove)
     const toDoItems = document.querySelectorAll(".to-do-item"); // we get all to-do-items
     const toDoItemsArray = [...toDoItems]; // we intend to find a specific item in the list of all to-do-items,
