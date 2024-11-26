@@ -1,3 +1,3 @@
-Random Quote Generator
+Light/Dark Mode Toggle
 
-Create a program that displays a random quote from a predefined list every time the user clicks a button.
+Write a program that toggles the page between light mode and dark mode when a button is clicked.

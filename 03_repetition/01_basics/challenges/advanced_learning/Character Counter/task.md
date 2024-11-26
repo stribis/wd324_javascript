@@ -1,3 +1,3 @@
-To-Do List
+Character Counter
 
-Create a simple to-do list where the user can add items by typing in an input field and clicking a button. Display the list dynamically.
+Write a program that counts the number of characters entered in a text area and displays the count in real time.
