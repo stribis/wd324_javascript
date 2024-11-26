@@ -88,3 +88,4 @@ Create an HTML page with a button. Write a script that changes the text of the b
 Exercise 12: Add New List Item
 
 Create an HTML page with an unordered list (<ul>). Write a script that adds a new list item (<li>) with the text "New Item" to the list.
+*/
