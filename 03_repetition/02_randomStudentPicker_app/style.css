@@ -1,0 +1,90 @@
+/* Block: Body */
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Block: title */
+.title {
+    margin-bottom: 20px;
+}
+  
+/* Block: student-name */
+.student-name {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+  
+/* Block: button */
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+  
+/* Block: dice-container */
+.dice-container {
+    perspective: 1000px;
+    margin: 20px;
+}
+  
+/* Block: dice */
+.dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s;
+}
+  
+/* Block: dice__face */
+.dice__face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #f3f3f3;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+  
+/* Modifiers for each face */
+.dice__face--front { transform: translateZ(50px); }
+.dice__face--back { transform: rotateY(180deg) translateZ(50px); }
+.dice__face--left { transform: rotateY(-90deg) translateZ(50px); }
+.dice__face--right { transform: rotateY(90deg) translateZ(50px); }
+.dice__face--top { transform: rotateX(90deg) translateZ(50px); }
+.dice__face--bottom { transform: rotateX(-90deg) translateZ(50px); }  
+
+/* result modifier */
+.result {
+font-size: 5rem;
+}
+
+/* Block: Footer */
+footer {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Dice Spin Animation */
+@keyframes dice-spin {
+    0% { transform: rotateX(0) rotateY(0); }
+    100% { transform: rotateX(1080deg) rotateY(1080deg); } /* Spins 3 times */
+}
+  
+/* Add this class to start spinning the dice */
+.dice--spinning {
+animation: dice-spin 2s ease-in-out; /* 2 seconds of spin */
+}  

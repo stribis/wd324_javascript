@@ -6,22 +6,22 @@ Welcome to the JavaScript course! This course is designed to provide you with a 
 
 ## Course Content
 
-### 1. Introduction to JavaScript
+### 1. Introduction to JavaScript (01_basics, 01 - 03, 05)
 - Introduction to JavaScript and its role in web development.
 - Basics of JavaScript syntax, variables, data types, and operators.
 - Control structures: if...else statements, loops, and switch statements.
 
-### 2. Functions and Scope
-- Function declaration and expression.
-- Function parameters and return values.
-- Scope and closure in JavaScript.
-
-### 3. Arrays and Objects
+### 2. Arrays and Objects (01_basics, 04)
 - Working with arrays: creation, manipulation, and iteration.
 - Understanding objects and their properties.
 - Object-oriented programming concepts in JavaScript.
 
-### 4. DOM Manipulation
+### 3. Functions and Scope (01_basics, 06)
+- Function declaration and expression.
+- Function parameters and return values.
+- Scope and closure in JavaScript.
+
+### 4. DOM Manipulation (02_DOM, 01 - 02)
 - Introduction to the Document Object Model (DOM).
 - Selecting and modifying DOM elements using JavaScript.
 - Event handling: attaching event listeners and responding to user interactions.

@@ -57,7 +57,7 @@ This person is a minor.
     - User the existing `index.html` file
 
 2. **JavaScript Setup**
-    - Create a `script.js` file and link it to the HTML file.
+    - Create a `solution.js` file and link it to the HTML file.
 
 3. **Dataset**  
    The dataset structure be like:
