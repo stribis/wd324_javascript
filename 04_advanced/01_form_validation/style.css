@@ -1,0 +1,159 @@
+/* 04_advanced/01_form_validation/style.css */
+
+/* === Small CSS Reset === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+label,
+input,
+select,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.personal-info {
+  padding-bottom: 3rem;
+}
+
+.personal-info__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.personal-info__description {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.personal-info__form {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.form__group {
+  grid-column: span 6;
+  position: relative;
+}
+
+.form__group--half {
+  grid-column: span 3;
+}
+
+.form__group--large {
+  grid-column: span 4;
+}
+
+.form__group--third {
+  grid-column: span 2;
+}
+
+.form__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.form__input {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+.form__input::placeholder {
+  color: #9ca3af;
+}
+
+.form__input:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.form__select-container {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.form__select {
+  width: 100%;
+  padding: 0.375rem 2rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  appearance: none;
+}
+
+.form__select-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  color: #6b7280;
+  transform: translateY(-50%);
+}
+
+.button {
+  border-radius: 0.375rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button--primary:hover {
+  background-color: #e0e7ff;
+}
+
+.error-message {
+  color: #b22f2f;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+}

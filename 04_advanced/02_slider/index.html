@@ -1,0 +1,91 @@
+<!-- 04_advanced/02_slider/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js" defer></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider__slide">
+        <img
+          class="slider__slide-image"
+          src="https://picsum.photos/800/450"
+          alt="Some random picture from the internet"
+        />
+      </div>
+      <div class="slider__slide">
+        <img
+          class="slider__slide-image"
+          src="https://picsum.photos/800/450?random=2"
+          alt="Fooooooo"
+        />
+      </div>
+      <div class="slider__slide">
+        <img
+          class="slider__slide-image"
+          src="https://picsum.photos/800/450?random=3"
+          alt="Random Access Memory"
+        />
+      </div>
+      <div class="slider__slide">
+        <img
+          class="slider__slide-image"
+          src="https://picsum.photos/800/450?random=4"
+          alt="Hello, is it me you're looking for"
+        />
+      </div>
+      <div class="slider__slide">
+        <img
+          class="slider__slide-image"
+          src="https://picsum.photos/800/450?random=5"
+          alt="Blib blab blub"
+        />
+      </div>
+      <div class="slider__controls">
+        <button class="slider__button slider__button--left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-chevron-left"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="slider__button slider__button--right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-chevron-right"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider__legend">
+      <h2 class="slider__legend-title">Slide</h2>
+      <p class="slider__legend-text">Slide Description</p>
+    </div>
+  </body>
+</html>

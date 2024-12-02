@@ -1,0 +1,98 @@
+<!-- 04_advanced/01_form_validation/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="root">
+    <div class="personal-info">
+      <h2 class="personal-info__title">Personal Information</h2>
+      <p class="personal-info__description">Use a permanent address where you can receive mail.</p>
+
+      <form class="personal-info__form">
+        <div class="form__group form__group--half">
+          <label for="firstName" class="form__label">First name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            autocomplete="given-name"
+            class="form__input"
+          />
+        </div>
+        <div class="form__group form__group--half">
+          <label for="lastName" class="form__label">Last name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            autocomplete="family-name"
+            class="form__input"
+          />
+        </div>
+
+        <div class="form__group form__group">
+          <label for="email" class="form__label">Email address</label>
+          <input type="email" name="email" id="email" autocomplete="email" class="form__input" />
+        </div>
+
+        <div class="form__group">
+          <label for="region" class="form__label">State / Province</label>
+          <input
+            type="text"
+            name="region"
+            id="region"
+            autocomplete="address-level1"
+            class="form__input"
+          />
+        </div>
+
+        <div class="form__group form__group--third">
+          <label for="city" class="form__label">City</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            autocomplete="address-level2"
+            class="form__input"
+          />
+        </div>
+
+        <div class="form__group form__group--third">
+          <label for="streetAddress" class="form__label">Street address</label>
+          <input
+            type="text"
+            name="streetAddress"
+            id="streetAddress"
+            autocomplete="street-address"
+            class="form__input"
+          />
+        </div>
+
+        <div class="form__group form__group--third">
+          <label for="postalCode" class="form__label">ZIP / Postal code</label>
+          <input
+            type="text"
+            name="postalCode"
+            id="postalCode"
+            autocomplete="postal-code"
+            class="form__input"
+          />
+        </div>
+        <button type="submit" class="button button--primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
