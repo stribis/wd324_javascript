@@ -69,8 +69,126 @@ async function getSuggestedPokemons() {
       })
     );
 
-    console.log("pokemonData: ", pokemonData);
-  } catch (error) {}
+    // update state with the fetchted Pokemon data
+    state.suggestedPokemons = pokemonData;
+    state.currentIndex = 0; // reset the index to diplay the first pokemon after fetching
+
+    // Debug: log the fetched Pokemon data
+    console.log("Suggested Pokemons: ", state.suggestedPokemons);
+
+    // render the current pokemon
+    displayCurrentPokemon();
+  } catch (error) {
+    /*
+    The catch only activates whenever there is an error in the try block.
+    When there is an error, it stops the execution of the try block and executes the catch block.
+    */
+    console.error("Error fetching Pokemon suggestions: ", error);
+  }
 }
 
+// function to display the current pokemon
+function displayCurrentPokemon() {
+  /*
+    Objective:
+    Clear the Pokemon container and display the current pokemon
+    with details of the Pokemon at the current index
+    */
+  // get the pokemon__container element
+  const pokemonContainer = document.querySelector(".pokemon__container");
+
+  // Retrievet the current Pokemon based on the index
+  const pokemon = state.suggestedPokemons[state.currentIndex];
+
+  // Create a card element for the pokemon
+  const card = document.createElement("div");
+  card.className = "pokemon__card";
+
+  /*
+      Use a template string to populate the Pokémon card with:
+      - An image of the Pokémon (using `pokemon.image` for the src)
+      - The Pokémon's name
+      - The Pokémon's types
+    */
+  card.innerHTML = `
+      <img class="pokemon__image" src="${pokemon.image}" alt="${pokemon.name}">
+      <div class="pokemon__name">${pokemon.name}</div>
+      <div class="pokemon__types">${pokemon.types}</div>
+    `;
+
+  // Append the Pokémon card to the container
+  pokemonContainer.appendChild(card);
+}
+
+// Function to handle the "Skip" button click
+function handleSkip() {
+  /*
+        Objective:
+        Add an animation to the Pokémon card when skipping
+        and load the next Pokémon once the animation ends.
+      */
+
+  // Select the current Pokémon card
+
+  // Add the skip animation class
+
+  /*
+        Listen for the end of the CSS transition (animation).
+        Once the animation ends, load the next Pokémon.
+      */
+  card.addEventListener(
+    "transitionend",
+    () => {
+      // Increment the currentIndex to show the next Pokémon
+
+      /*
+            If the currentIndex exceeds the length of the suggested Pokémon array,
+            increment the offset and fetch the next batch of Pokémon from the API.
+          */
+      if ("") {
+      } else {
+        // Otherwise, display the next Pokémon
+      }
+    },
+    { once: true } // Ensure the event listener runs only once
+  );
+}
+
+// Function to handle the "Like" button click
+function handleLike() {
+  /*
+        Objective:
+        Add an animation to the Pokémon card when liking
+        and load the next Pokémon once the animation ends.
+      */
+
+  // Select the current Pokémon card
+
+  // Add the like animation class
+
+  /*
+        Listen for the end of the CSS transition (animation).
+        Once the animation ends, load the next Pokémon.
+      */
+  card.addEventListener(
+    "transitionend",
+    () => {
+      // Increment the currentIndex to show the next Pokémon
+
+      /*
+            If the currentIndex exceeds the length of the suggested Pokémon array,
+            increment the offset and fetch the next batch of Pokémon from the API.
+          */
+      if ("") {
+      } else {
+        // Otherwise, display the next Pokémon
+      }
+    },
+    { once: true } // Ensure the event listener runs only once
+  );
+}
+
+// Fetch the initial batch of suggested Pokémon
 getSuggestedPokemons();
+
+// Attach event listeners to the Skip and Like buttons
