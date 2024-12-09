@@ -96,6 +96,7 @@ function displayCurrentPokemon() {
     */
   // get the pokemon__container element
   const pokemonContainer = document.querySelector(".pokemon__container");
+  pokemonContainer.innerHTML = ""; // clear the container
 
   // Retrievet the current Pokemon based on the index
   const pokemon = state.suggestedPokemons[state.currentIndex];
@@ -129,8 +130,9 @@ function handleSkip() {
       */
 
   // Select the current Pokémon card
-
+  const card = document.querySelector(".pokemon__card");
   // Add the skip animation class
+  card.classList.add("skip-animation");
 
   /*
         Listen for the end of the CSS transition (animation).
@@ -140,14 +142,17 @@ function handleSkip() {
     "transitionend",
     () => {
       // Increment the currentIndex to show the next Pokémon
+      state.currentIndex++;
 
       /*
             If the currentIndex exceeds the length of the suggested Pokémon array,
             increment the offset and fetch the next batch of Pokémon from the API.
           */
-      if ("") {
+      if (state.currentIndex >= state.suggestedPokemons.length) {
+        state.offset += 20; // increment the offset by 20 to fetch the next batch of Pokémon
+        getSuggestedPokemons();
       } else {
-        // Otherwise, display the next Pokémon
+        displayCurrentPokemon();
       }
     },
     { once: true } // Ensure the event listener runs only once
@@ -163,8 +168,9 @@ function handleLike() {
       */
 
   // Select the current Pokémon card
-
+  const card = document.querySelector(".pokemon__card");
   // Add the like animation class
+  card.classList.add("like-animation");
 
   /*
         Listen for the end of the CSS transition (animation).
@@ -174,14 +180,18 @@ function handleLike() {
     "transitionend",
     () => {
       // Increment the currentIndex to show the next Pokémon
+      state.currentIndex++;
 
       /*
             If the currentIndex exceeds the length of the suggested Pokémon array,
             increment the offset and fetch the next batch of Pokémon from the API.
           */
-      if ("") {
+      if (state.currentIndex >= state.suggestedPokemons.length) {
+        state.offset += 20; // increment the offset by 20 to fetch the next batch of Pokémon
+        getSuggestedPokemons();
       } else {
         // Otherwise, display the next Pokémon
+        displayCurrentPokemon();
       }
     },
     { once: true } // Ensure the event listener runs only once
@@ -192,3 +202,5 @@ function handleLike() {
 getSuggestedPokemons();
 
 // Attach event listeners to the Skip and Like buttons
+document.querySelector(".controls__skip-button").addEventListener("click", handleSkip);
+document.querySelector(".controls__like-button").addEventListener("click", handleLike);
