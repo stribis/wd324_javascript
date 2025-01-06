@@ -155,6 +155,117 @@ console.log(resultArray); // always returns an undefined, data can't be processe
 const resultMapArray = originalArray.map((element) => element * 2);
 
 console.log(originalArray); // is still the original
-console.log(resultMapArray); // returns a new array
+console.log(resultMapArray); // returns a new array -> [2, 4, 6, 8, 10]
 
 console.clear();
+
+/*
+REST PARAMETER
+
+The REST parameter allows us to define an unfedined amount of arguments in an array
+This is very helpful, when we don't know, how many paramenters we'll get
+The REST parameter collects every other argument in an array
+The REST parameter is always the last argument in the function
+
+SYNTAX:
+function funnctionName(param1, param2, ...rest){
+  code to execute
+}
+*/
+
+// Example 1
+// We know, that we'll get at least 2 arguments
+function sum(a, b, ...rest) {
+  // we count the sum of a and b
+  let total = a + b;
+
+  // now we can iterate through the rest arguments
+  for (let num of rest) {
+    // addition of the rest arguments
+    total += num;
+  }
+
+  return total;
+}
+
+console.log(sum(1, 2)); // logs: 3
+console.log(sum(3, 4, 5, 6, 7)); // logs: 25
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // logs: 55
+
+// Example 2
+
+function stringConcat(string, ...blablablub) {
+  console.log(blablablub);
+  let result = string;
+  for (let str of blablablub) {
+    result += str;
+  }
+  return result;
+}
+
+console.log(stringConcat("Hello", " ", "World")); // logs: Hello World
+console.log(stringConcat("Hello", " ", "World", " ", "I", " ", "am", " ", "a", " ", "programmer")); // logs: Hello World I am a programmer
+
+console.clear();
+
+/*
+ SPREAD OPERATOR
+ The spread operator allows us to pass an array as an argument, or to deconstruct an object into individual variables
+ It is helpful when we want to pass an array or an object as an argument to a function
+ Or to copy something into a new variable
+
+ SYNTAX:
+ const newArray = [...oldArray]
+ const newObject = {...oldObject}
+*/
+
+// Example 1, combining of array
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const combinedArray = ["Hello World", ...array1, "This is cool", ...array2];
+// What actually happens, it copies the values inside of the array
+// and adds them into the new array:
+const combinedArrayHappening = ["Hello World", 1, 2, 3, "This is cool", 4, 5, 6];
+
+console.log(combinedArray);
+console.log(combinedArrayHappening);
+
+// Example 2, copy of arrays
+const originalArraySpread = [1, 2, 3];
+const copiedArray = [...originalArraySpread];
+// What happens here is, it copies the original values into a new array
+// We never actually want to modify the original array, that's why we use the spread operator to copy the values
+// Now we can modify the copied array
+copiedArray.push(4);
+
+console.log(copiedArray); // logs: [1, 2, 3, 4]
+
+// Example 3, combining of objects
+const object1 = { firstname: "Shaun", lastname: "White", age: 35 };
+const object2 = { job: "Professional Snowboareder", country: "USA" };
+
+const combinedObject = { ...object1, ...object2 };
+console.log(combinedObject);
+
+// Example 4, copying of objects into arrays
+const people = [
+  {
+    firstname: "Max",
+    lastname: "Mustermann",
+    age: 24,
+    job: "Software Engineer",
+    country: "Germany",
+  },
+  {
+    firstname: "Jane",
+    lastname: "Doe",
+    age: 27,
+    job: "CTO",
+    country: "Switzerland",
+  },
+];
+
+// we are also able to copy the values into an array with the help of the spread operator
+const peopleArray = [...people, combinedObject];
+
+console.log(peopleArray);

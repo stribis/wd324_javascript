@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --purpleblack: #1d1c26;
+}
+
+body {
+  background: var(--purpleblack);
+  overflow-x: hidden;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#typewriter {
+  font-size: clamp(1rem, -0.1556rem + 4.9307vw, 10rem);
+  letter-spacing: 5px;
+}
