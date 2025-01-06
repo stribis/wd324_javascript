@@ -36,8 +36,26 @@ function type() {
 
 // function to delete
 function deleteType() {
-  console.log("deleteType");
-  clearInterval(interval);
+  // extracts the element of the current content, which is going to be deleted
+  let text = content[count].substring(0, character_index + 1);
+  // setting the text in the HTML-Element
+  typewriter.innerHTML = text;
+  // counts down the character index
+  character_index--;
+
+  // if the whole text is deleted
+  if (text === "") {
+    // we stop the interval, to escape the infinite loop
+    clearInterval(interval);
+    // increment count, reset to 0 if it exceeds content length
+    count = (count + 1) % content.length;
+    // reset the character index
+    character_index = 0;
+    // wait 200 miliseconds to start the type funciton again
+    setTimeout(function () {
+      interval = setInterval(type, 250);
+    }, 200);
+  }
 }
 
 // setting the interval with the help of setInterval

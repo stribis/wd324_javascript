@@ -1,0 +1,27 @@
+#create-button {
+  background: #2d3142;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
+#style-button {
+  background: #9a2f28;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
+.background-style {
+  margin: 2rem 0;
+  background: #2d3142;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
