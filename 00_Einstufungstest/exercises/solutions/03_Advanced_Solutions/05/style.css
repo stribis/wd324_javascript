@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#search-container {
+  margin: 20px;
+}
+
+#search-input {
+  padding: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.movie-poster {
+  max-width: 100%;
+}
+
