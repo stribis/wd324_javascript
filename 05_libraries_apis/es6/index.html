@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="code.js" defer></script>
+  <script src="04_squares.js" defer></script>
+  <style>
+    /* Small Reset */
+    *::before, *::after, * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .field {
+      min-height: 100vh;
+      background: #222;
+      position: relative;
+    }
+
+    .square{
+      position: absolute;
+    } 
+
+  </style>
 </head>
 <body>
-  <button class="btn">Send</button>
+  <main class="field"></main>
 </body>
 </html>
