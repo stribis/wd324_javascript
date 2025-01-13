@@ -1,0 +1,38 @@
+[
+  {
+    "user": "ttran",
+    "blogTitle": "My first blog",
+    "blogContent": "This is my first blog post. I'm so excited to start blogging!",
+    "image": {
+      "blogImage": "download.webp",
+      "imageAlt": "A cute cat"
+    },
+    "date": "2021-01-01",
+    "likes": 10,
+    "tags": ["first", "blog", "excited"]
+  },
+  {
+    "user": "ttran",
+    "blogTitle": "My first blog",
+    "blogContent": "This is my first blog post. I'm so excited to start blogging!",
+    "image": {
+      "blogImage": "catpic.jpg",
+      "imageAlt": "A cute cat"
+    },
+    "date": "2021-01-01",
+    "likes": 10,
+    "tags": ["first", "blog", "excited"]
+  },
+  {
+    "user": "ttran",
+    "blogTitle": "My first blog",
+    "blogContent": "This is my first blog post. I'm so excited to start blogging!",
+    "image": {
+      "blogImage": "catpic.jpg",
+      "imageAlt": "A cute cat"
+    },
+    "date": "2021-01-01",
+    "likes": 10,
+    "tags": ["first", "blog", "excited"]
+  }
+]
