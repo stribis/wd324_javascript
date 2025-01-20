@@ -122,6 +122,9 @@ input[type=submit] {
 }
 
 .plain.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.2rem;
 }
 
@@ -148,6 +151,7 @@ input[type=submit] {
 }
 
 .misc {
+  color: var(--pri-color);
   display: flex;
   margin-top: 1rem;
   justify-content: space-between;
@@ -162,3 +166,16 @@ input[type=submit] {
 }
 
 /*# sourceMappingURL=style.css.map */
+.flag {
+  font-size: 2rem;
+}
+
+.weather-info {
+  padding: 2rem;
+}
+
+.share-icon {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}

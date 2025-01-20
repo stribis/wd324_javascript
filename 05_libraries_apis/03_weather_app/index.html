@@ -6,12 +6,14 @@
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script defer src="code.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="toggle-container">
+      
       <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
         <i class="wi-day-sunny wi"></i>
       </button>
@@ -24,10 +26,11 @@
 
       <input type="submit" value="Submit">
     </form>
-
+    
 
 
   </div>
+  <i class="fa-solid fa-share share-icon" onclick="captureScreenshot()"></i>
 </body>
 </html>
 
