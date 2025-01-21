@@ -1,4 +1,4 @@
-const apiKey = "af1eb7ff29c464bd26db09fc2c06ca09";
+const apiKey = "";
 
 document.querySelector("#query-form").addEventListener("submit", (e) => {
   e.preventDefault();
