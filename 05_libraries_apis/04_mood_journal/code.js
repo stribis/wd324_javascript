@@ -1,5 +1,4 @@
-const weatherApi = '';
-const aqiApi = '';
+import { apiKeys } from './keys';
 
 const user = {
   location: {},
@@ -14,8 +13,13 @@ if ('geolocation' in navigator) {
   });
 }
 
+<<<<<<< HEAD
 async function getWeather() {
   const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${user.location.lat}&lon=${user.location.lon}&appid=&units=metric`;
+=======
+async function getWeather () {
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${user.location.lat}&lon=${user.location.lon}&appid=${apiKeys.WEATHERKEY}&units=metric`
+>>>>>>> bcab6e0 (import keys from keys.js)
 
   const response = await fetch(weatherUrl);
   const data = await response.json();
@@ -24,12 +28,21 @@ async function getWeather() {
   showWeather(data);
 }
 
+<<<<<<< HEAD
 async function getAQI() {
   const aqiUrl = `https://api.waqi.info/feed/geo:${user.location.lat};${user.location.lon}/?token=`;
   const response = await fetch(aqiUrl);
   const data = await response.json();
   user.aqi = data;
   showAqi(data);
+=======
+async function getAQI () {
+  const aqiUrl = `https://api.waqi.info/feed/geo:${user.location.lat};${user.location.lon}/?token=${apiKeys.WAQIKEY}`
+  const response = await fetch(aqiUrl)
+  const data = await response.json()
+  user.aqi = data
+  showAqi(data)
+>>>>>>> bcab6e0 (import keys from keys.js)
 }
 
 function showWeather(weatherData) {
