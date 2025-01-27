@@ -1,3 +1,6 @@
+const weatherApi = '';
+const aqiApi = '';
+
 const user = {
   location: {},
 };
