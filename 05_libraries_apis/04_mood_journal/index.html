@@ -4,26 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mood Journal</title>
-  <script src="code.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="./keys.js" type="module"></script>
+  <script src="code.js" type="module" defer></script>
 </head>
 <body>
 
-  <form>
-    <label for="mood">Enter your mood</label>
-    <input type="text" name="mood" id="mood" placeholder="Happy">
-    <button type="submit">Create Entry</button>
+  <h1>Mood Journal</h1>
+
+  <div class="weather-info">
+    <p id="weather"><i class="fas fa-cloud-sun"></i> Fetching weather...</p>
+    <p id="aqi"><i class="fas fa-wind"></i> Fetching AQI...</p>
+  </div>
+
+  <form class="form">
+    <input type="text" id="mood" placeholder="Enter your mood" required />
+    <button id="save-entry"><i class="fas fa-save"></i> Save Entry</button>
   </form>
 
-  <main class="main"></main>
-
-  <div class="output">
-    
-  </div>
-  <!-- <p>Geo-Location </p> -->
-  <!-- <p>Weather Data</p> -->
-  <!-- <p>AQI - Air Quality</p> -->
-  <!-- <p>User's Mood (as input)</p> -->
-  <!-- <p>User's Image ( webcam photo)</p> -->
-  <!-- <p>SAVE ALL DATA TO LOCALSTORAGE</p> -->
+  <h2><i class="fas fa-journal-whills"></i> Journal Entries</h2>
+  <div class="journal" id="journal"></div>
 </body>
 </html>
